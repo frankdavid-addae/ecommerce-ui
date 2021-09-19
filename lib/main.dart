@@ -1,4 +1,5 @@
 import 'package:ecommerce_ui/constants.dart';
+import 'package:ecommerce_ui/routes.dart';
 import 'package:ecommerce_ui/screens/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,6 @@ void main() {
 class EcommerceUiApp extends StatelessWidget {
   const EcommerceUiApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,7 +26,10 @@ class EcommerceUiApp extends StatelessWidget {
         ),
         primarySwatch: Colors.blue,
       ),
-      home: const SplashScreen(),
+      // home: const SplashScreen(),
+      // We use routeName so we don't have to remember the name
+      initialRoute: SplashScreen.routeName,
+      routes: routes,
     );
   }
 }
