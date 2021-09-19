@@ -1,4 +1,4 @@
-import 'package:ecommerce_ui/screens/components/body.dart';
+import 'package:ecommerce_ui/screens/splash/components/body.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +11,7 @@ class SplashScreen extends StatelessWidget {
     // Initializing the size config class
     SizeConfig().init(context);
     return const Scaffold(
-      body: Body(),
+      body: SplashScreenBody(),
     );
   }
 }

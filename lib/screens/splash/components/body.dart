@@ -2,18 +2,19 @@
 
 import 'package:ecommerce_ui/components/default_button.dart';
 import 'package:ecommerce_ui/constants.dart';
-import 'package:ecommerce_ui/screens/components/splash_content.dart';
+import 'package:ecommerce_ui/screens/auth/signin/signin_screen.dart';
+import 'package:ecommerce_ui/screens/splash/components/splash_content.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
-class Body extends StatefulWidget {
-  const Body({Key? key}) : super(key: key);
+class SplashScreenBody extends StatefulWidget {
+  const SplashScreenBody({Key? key}) : super(key: key);
 
   @override
-  _BodyState createState() => _BodyState();
+  _SplashScreenBodyState createState() => _SplashScreenBodyState();
 }
 
-class _BodyState extends State<Body> {
+class _SplashScreenBodyState extends State<SplashScreenBody> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
@@ -71,7 +72,9 @@ class _BodyState extends State<Body> {
                     Spacer(flex: 3),
                     DefaultButton(
                       buttonText: 'Continue',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, SignInScreen.routeName);
+                      },
                     ),
                     Spacer(),
                   ],

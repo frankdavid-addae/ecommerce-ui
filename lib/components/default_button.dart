@@ -23,11 +23,11 @@ class DefaultButton extends StatelessWidget {
           buttonText,
           style: TextStyle(
             fontSize: getProportionateScreenWidth(18.0),
-            color: Colors.white,
+            color: kWhiteColor,
           ),
         ),
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(kPrimaryColor),
+          backgroundColor: MaterialStateProperty.all(kPrimaryColor),
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
