@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:ecommerce_ui/screens/auth/signin/components/body.dart';
+import 'package:ecommerce_ui/screens/signin/components/body.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatelessWidget {

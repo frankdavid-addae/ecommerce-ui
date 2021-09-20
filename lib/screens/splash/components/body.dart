@@ -2,7 +2,7 @@
 
 import 'package:ecommerce_ui/components/default_button.dart';
 import 'package:ecommerce_ui/constants.dart';
-import 'package:ecommerce_ui/screens/auth/signin/signin_screen.dart';
+import 'package:ecommerce_ui/screens/signin/signin_screen.dart';
 import 'package:ecommerce_ui/screens/splash/components/splash_content.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';

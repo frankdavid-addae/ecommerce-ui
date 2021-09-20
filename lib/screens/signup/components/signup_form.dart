@@ -4,6 +4,7 @@ import 'package:ecommerce_ui/components/custom_suffix_icon.dart';
 import 'package:ecommerce_ui/components/default_button.dart';
 import 'package:ecommerce_ui/components/form_error.dart';
 import 'package:ecommerce_ui/constants.dart';
+import 'package:ecommerce_ui/screens/complete_profile/complete_profile_screen.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -50,10 +51,11 @@ class _SignUpFormState extends State<SignUpForm> {
           FormError(errors: errors),
           SizedBox(height: getProportionateScreenHeight(40.0)),
           DefaultButton(
-            buttonText: 'Sign Up',
+            buttonText: 'Continue',
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 // Nagivate to complete profile screen if all fields are valid
+                Navigator.pushNamed(context, CompleteProfileScreen.routeName);
               }
             },
           ),
@@ -129,9 +131,9 @@ class _SignUpFormState extends State<SignUpForm> {
     return TextFormField(
       cursorColor: kTextColor,
       obscureText: true,
-      onSaved: (password) => password = password,
+      onSaved: (password) => confirmPassword = password,
       onChanged: (value) {
-        if (password == confirmPassword) {
+        if (password == value) {
           removeError(error: kMatchPasswordError);
         }
         confirmPassword = value;

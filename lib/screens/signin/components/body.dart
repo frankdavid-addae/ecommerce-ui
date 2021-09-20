@@ -3,7 +3,7 @@
 import 'package:ecommerce_ui/components/no_account_text.dart';
 import 'package:ecommerce_ui/components/social_card.dart';
 import 'package:ecommerce_ui/constants.dart';
-import 'package:ecommerce_ui/screens/auth/signin/components/signin_form.dart';
+import 'package:ecommerce_ui/screens/signin/components/signin_form.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 

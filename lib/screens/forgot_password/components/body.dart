@@ -105,7 +105,7 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
           FormError(errors: errors),
           SizedBox(height: SizeConfig.screenHeight! * 0.1),
           DefaultButton(
-            buttonText: 'Submit',
+            buttonText: 'Continue',
             onPressed: () {
               if (_formKey.currentState!.validate()) {}
             },

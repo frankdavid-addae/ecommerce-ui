@@ -2,7 +2,7 @@
 
 import 'package:ecommerce_ui/components/social_card.dart';
 import 'package:ecommerce_ui/constants.dart';
-import 'package:ecommerce_ui/screens/auth/signup/components/signup_form.dart';
+import 'package:ecommerce_ui/screens/signup/components/signup_form.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
