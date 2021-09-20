@@ -5,6 +5,7 @@ import 'package:ecommerce_ui/components/default_button.dart';
 import 'package:ecommerce_ui/components/form_error.dart';
 import 'package:ecommerce_ui/constants.dart';
 import 'package:ecommerce_ui/screens/forgot_password/forgot_password_screen.dart';
+import 'package:ecommerce_ui/screens/login_success/login_success_screen.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -63,6 +64,8 @@ class _SignInFormState extends State<SignInForm> {
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
+                // If all fields are valid, go to success screen
+                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
           ),
@@ -94,10 +97,12 @@ class _SignInFormState extends State<SignInForm> {
           setState(() {
             errors.add(kPasswordNullError);
           });
+          return '';
         } else if (value.length < 8 && !errors.contains(kShortPasswordError)) {
           setState(() {
             errors.add(kShortPasswordError);
           });
+          return '';
         } else {
           return null;
         }
@@ -133,11 +138,13 @@ class _SignInFormState extends State<SignInForm> {
           setState(() {
             errors.add(kEmailNullError);
           });
+          return '';
         } else if (!emailValidatorRegExp.hasMatch(value) &&
             !errors.contains(kInvalidEmailError)) {
           setState(() {
             errors.add(kInvalidEmailError);
           });
+          return '';
         } else {
           return null;
         }

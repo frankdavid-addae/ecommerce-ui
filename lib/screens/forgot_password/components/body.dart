@@ -84,11 +84,13 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
                 setState(() {
                   errors.add(kEmailNullError);
                 });
+                return '';
               } else if (!emailValidatorRegExp.hasMatch(value) &&
                   !errors.contains(kInvalidEmailError)) {
                 setState(() {
                   errors.add(kInvalidEmailError);
                 });
+                return '';
               } else {
                 return null;
               }
