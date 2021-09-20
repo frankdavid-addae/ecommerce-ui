@@ -30,7 +30,7 @@ class DefaultButton extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all(kPrimaryColor),
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.0),
+              borderRadius: BorderRadius.circular(8.0),
             ),
           ),
         ),

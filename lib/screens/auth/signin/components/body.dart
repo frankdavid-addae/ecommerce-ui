@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:ecommerce_ui/components/no_account_text.dart';
 import 'package:ecommerce_ui/components/social_card.dart';
 import 'package:ecommerce_ui/constants.dart';
 import 'package:ecommerce_ui/screens/auth/signin/components/signin_form.dart';
@@ -55,24 +56,7 @@ class SignInScreenBody extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: getProportionateScreenHeight(20.0)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Don\'t have an account? ',
-                      style: TextStyle(
-                        fontSize: getProportionateScreenWidth(16.0),
-                      ),
-                    ),
-                    Text(
-                      'Sign Up',
-                      style: TextStyle(
-                        color: kPrimaryColor,
-                        fontSize: getProportionateScreenWidth(16.0),
-                      ),
-                    ),
-                  ],
-                ),
+                NoAccountText(),
               ],
             ),
           ),
