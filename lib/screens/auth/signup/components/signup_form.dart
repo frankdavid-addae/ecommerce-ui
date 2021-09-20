@@ -4,24 +4,21 @@ import 'package:ecommerce_ui/components/custom_suffix_icon.dart';
 import 'package:ecommerce_ui/components/default_button.dart';
 import 'package:ecommerce_ui/components/form_error.dart';
 import 'package:ecommerce_ui/constants.dart';
-import 'package:ecommerce_ui/screens/forgot_password/forgot_password_screen.dart';
-import 'package:ecommerce_ui/screens/login_success/login_success_screen.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
-class SignInForm extends StatefulWidget {
-  const SignInForm({Key? key}) : super(key: key);
+class SignUpForm extends StatefulWidget {
+  const SignUpForm({Key? key}) : super(key: key);
 
   @override
-  _SignInFormState createState() => _SignInFormState();
+  _SignUpFormState createState() => _SignUpFormState();
 }
 
-class _SignInFormState extends State<SignInForm> {
+class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
   final List<String> errors = [];
 
-  String? emailAddress, password;
-  bool isChecked = false;
+  String? emailAddress, password, confirmPassword;
 
   void addError({String? error}) {
     if (!errors.contains(error)) {
@@ -49,39 +46,14 @@ class _SignInFormState extends State<SignInForm> {
           SizedBox(height: getProportionateScreenHeight(30.0)),
           buildPasswordFormField(),
           SizedBox(height: getProportionateScreenHeight(30.0)),
-          Row(
-            children: [
-              Checkbox(
-                value: isChecked,
-                onChanged: (value) {
-                  setState(() {
-                    isChecked = value!;
-                  });
-                },
-                activeColor: kPrimaryColor,
-              ),
-              Text('Remember me'),
-              Spacer(),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, ForgotPasswordScreen.routeName);
-                },
-                child: Text(
-                  'Forgot Password',
-                  style: TextStyle(decoration: TextDecoration.underline),
-                ),
-              ),
-            ],
-          ),
+          buildConfirmPasswordFormField(),
           FormError(errors: errors),
-          SizedBox(height: getProportionateScreenHeight(30.0)),
+          SizedBox(height: getProportionateScreenHeight(40.0)),
           DefaultButton(
-            buttonText: 'Sign In',
+            buttonText: 'Sign Up',
             onPressed: () {
               if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                // If all fields are valid, go to success screen
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                // Nagivate to complete profile screen if all fields are valid
               }
             },
           ),
@@ -148,6 +120,35 @@ class _SignInFormState extends State<SignInForm> {
       keyboardType: TextInputType.visiblePassword,
       decoration: InputDecoration(
         hintText: 'Enter your password',
+        suffixIcon: CustomSuffixIcon(svgIcon: 'assets/icons/Lock.svg'),
+      ),
+    );
+  }
+
+  TextFormField buildConfirmPasswordFormField() {
+    return TextFormField(
+      cursorColor: kTextColor,
+      obscureText: true,
+      onSaved: (password) => password = password,
+      onChanged: (value) {
+        if (password == confirmPassword) {
+          removeError(error: kMatchPasswordError);
+        }
+        confirmPassword = value;
+      },
+      validator: (value) {
+        if (value!.isEmpty) {
+          return '';
+        } else if (password != confirmPassword) {
+          addError(error: kMatchPasswordError);
+          return '';
+        } else {
+          return null;
+        }
+      },
+      keyboardType: TextInputType.visiblePassword,
+      decoration: InputDecoration(
+        hintText: 'Confirm your password',
         suffixIcon: CustomSuffixIcon(svgIcon: 'assets/icons/Lock.svg'),
       ),
     );

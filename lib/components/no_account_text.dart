@@ -1,5 +1,5 @@
 import 'package:ecommerce_ui/constants.dart';
-// import 'package:ecommerce_ui/screens/forgot_password/forgot_password_screen.dart';
+import 'package:ecommerce_ui/screens/auth/signup/signup_screen.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +11,7 @@ class NoAccountText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        // Navigator.popAndPushNamed(context, ForgotPasswordScreen.routeName);
-      },
+      onTap: () => Navigator.popAndPushNamed(context, SignUpScreen.routeName),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

@@ -15,6 +15,13 @@ const kWhiteColor = Color(0xFFFFFFFF);
 
 const kAnimationDuration = Duration(microseconds: 200);
 
+final headerStyle = TextStyle(
+  color: kBlackColor,
+  fontSize: getProportionateScreenWidth(28.0),
+  fontWeight: FontWeight.bold,
+  height: 1.5,
+);
+
 // Form Errors
 final RegExp emailValidatorRegExp =
     RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
@@ -22,7 +29,7 @@ const String kEmailNullError = "Email address field is required";
 const String kInvalidEmailError = "Please enter a valid email address";
 const String kPasswordNullError = "Password field is required";
 const String kShortPasswordError = "Password should be at least 8 characters";
-const String kMatchPassError = "Passwords don't match";
+const String kMatchPasswordError = "Passwords don't match";
 const String kNamelNullError = "Name field is required";
 const String kPhoneNumberNullError = "Phone number field is required";
 const String kAddressNullError = "Address field is required";

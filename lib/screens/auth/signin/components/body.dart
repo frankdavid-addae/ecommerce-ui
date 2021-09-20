@@ -25,11 +25,7 @@ class SignInScreenBody extends StatelessWidget {
                 SizedBox(height: SizeConfig.screenHeight! * 0.04),
                 Text(
                   'Welcome Back',
-                  style: TextStyle(
-                    color: kBlackColor,
-                    fontSize: getProportionateScreenWidth(28.0),
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: headerStyle,
                 ),
                 Text(
                   'Sign in with your email and password \nor continue with social media',
