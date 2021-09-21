@@ -5,8 +5,8 @@ import 'package:ecommerce_ui/constants.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
-class LoginSuccessScreenBody extends StatelessWidget {
-  const LoginSuccessScreenBody({Key? key}) : super(key: key);
+class SignInSuccessScreenBody extends StatelessWidget {
+  const SignInSuccessScreenBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

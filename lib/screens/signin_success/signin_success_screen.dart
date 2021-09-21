@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:ecommerce_ui/screens/login_success/components/body.dart';
+import 'package:ecommerce_ui/screens/signin_success/components/body.dart';
 import 'package:flutter/material.dart';
 
-class LoginSuccessScreen extends StatelessWidget {
+class SignInSuccessScreen extends StatelessWidget {
   static String routeName = 'login-success-screen';
-  const LoginSuccessScreen({Key? key}) : super(key: key);
+  const SignInSuccessScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class LoginSuccessScreen extends StatelessWidget {
         leading: SizedBox(),
         title: Text('Login Successful'),
       ),
-      body: LoginSuccessScreenBody(),
+      body: SignInSuccessScreenBody(),
     );
   }
 }

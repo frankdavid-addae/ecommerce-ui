@@ -5,7 +5,7 @@ import 'package:ecommerce_ui/components/default_button.dart';
 import 'package:ecommerce_ui/components/form_error.dart';
 import 'package:ecommerce_ui/constants.dart';
 import 'package:ecommerce_ui/screens/forgot_password/forgot_password_screen.dart';
-import 'package:ecommerce_ui/screens/login_success/login_success_screen.dart';
+import 'package:ecommerce_ui/screens/signin_success/signin_success_screen.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -81,7 +81,7 @@ class _SignInFormState extends State<SignInForm> {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 // If all fields are valid, go to success screen
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                Navigator.pushNamed(context, SignInSuccessScreen.routeName);
               }
             },
           ),

@@ -2,7 +2,8 @@
 
 import 'package:ecommerce_ui/screens/complete_profile/complete_profile_screen.dart';
 import 'package:ecommerce_ui/screens/forgot_password/forgot_password_screen.dart';
-import 'package:ecommerce_ui/screens/login_success/login_success_screen.dart';
+import 'package:ecommerce_ui/screens/home/home_screen.dart';
+import 'package:ecommerce_ui/screens/signin_success/signin_success_screen.dart';
 import 'package:ecommerce_ui/screens/otp/otp_screen.dart';
 import 'package:ecommerce_ui/screens/signin/signin_screen.dart';
 import 'package:ecommerce_ui/screens/signup/signup_screen.dart';
@@ -15,8 +16,9 @@ final Map<String, WidgetBuilder> routes = {
   SplashScreen.routeName: (context) => SplashScreen(),
   SignInScreen.routeName: (context) => SignInScreen(),
   ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
-  LoginSuccessScreen.routeName: (context) => LoginSuccessScreen(),
+  SignInSuccessScreen.routeName: (context) => SignInSuccessScreen(),
   SignUpScreen.routeName: (context) => SignUpScreen(),
   CompleteProfileScreen.routeName: (context) => CompleteProfileScreen(),
   OtpScreen.routeName: (context) => OtpScreen(),
+  HomeScreen.routeName: (context) => HomeScreen(),
 };
