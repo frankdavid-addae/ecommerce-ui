@@ -4,6 +4,7 @@ import 'package:ecommerce_ui/components/custom_suffix_icon.dart';
 import 'package:ecommerce_ui/components/default_button.dart';
 import 'package:ecommerce_ui/components/form_error.dart';
 import 'package:ecommerce_ui/constants.dart';
+import 'package:ecommerce_ui/screens/otp/otp_screen.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -58,6 +59,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 // Navigate to OTP screen
+                Navigator.pushNamed(context, OtpScreen.routeName);
               }
             },
           )
@@ -68,6 +70,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
 
   TextFormField buildFirstNameFormField() {
     return TextFormField(
+      cursorColor: kTextColor,
       onSaved: (firstName) => firstName = firstName,
       onChanged: (value) {
         if (value.isNotEmpty) {
@@ -90,6 +93,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
 
   TextFormField buildLastNameFormField() {
     return TextFormField(
+      cursorColor: kTextColor,
       onSaved: (lastName) => lastName = lastName,
       onChanged: (value) {
         if (value.isNotEmpty) {
@@ -112,6 +116,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
 
   TextFormField buildPhoneNumberFormField() {
     return TextFormField(
+      cursorColor: kTextColor,
       keyboardType: TextInputType.phone,
       onSaved: (phoneNumber) => phoneNumber = phoneNumber,
       onChanged: (value) {
@@ -135,6 +140,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
 
   TextFormField buildAddressFormField() {
     return TextFormField(
+      cursorColor: kTextColor,
       onSaved: (address) => address = address,
       onChanged: (value) {
         if (value.isNotEmpty) {

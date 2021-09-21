@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -36,8 +38,9 @@ const String kPhoneNumberNullError = "Phone number field is required";
 const String kAddressNullError = "Address field is required";
 
 final otpInputDecoration = InputDecoration(
-  contentPadding:
-      EdgeInsets.symmetric(vertical: getProportionateScreenWidth(15)),
+  contentPadding: EdgeInsets.symmetric(
+    vertical: getProportionateScreenWidth(15.0),
+  ),
   border: outlineInputBorder(),
   focusedBorder: outlineInputBorder(),
   enabledBorder: outlineInputBorder(),
@@ -45,7 +48,7 @@ final otpInputDecoration = InputDecoration(
 
 OutlineInputBorder outlineInputBorder() {
   return OutlineInputBorder(
-    borderRadius: BorderRadius.circular(getProportionateScreenWidth(15)),
-    borderSide: const BorderSide(color: kTextColor),
+    borderRadius: BorderRadius.circular(getProportionateScreenWidth(8.0)),
+    borderSide: BorderSide(color: kTextColor),
   );
 }
