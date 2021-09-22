@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:ecommerce_ui/models/product.dart';
+import 'package:ecommerce_ui/screens/product_details/components/body.dart';
 import 'package:ecommerce_ui/screens/product_details/components/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,7 @@ class ProductDetailsScreen extends StatelessWidget {
         preferredSize: Size.fromHeight(AppBar().preferredSize.height),
         child: CustomAppBar(rating: arguments.products.rating),
       ),
+      body: ProductDetailsScreenBody(product: arguments.products),
     );
   }
 }
