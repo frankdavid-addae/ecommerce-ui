@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:ecommerce_ui/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 ThemeData theme() {
   return ThemeData(
@@ -38,16 +41,14 @@ TextTheme textTheme() {
 }
 
 AppBarTheme appBarTheme() {
-  return const AppBarTheme(
+  return AppBarTheme(
     color: kWhiteColor,
     elevation: 0.0,
-    brightness: Brightness.light,
+    systemOverlayStyle: SystemUiOverlayStyle.light,
     iconTheme: IconThemeData(color: kBlackColor),
-    textTheme: TextTheme(
-      headline6: TextStyle(
-        color: Color(0xFF8B8B8B),
-        fontSize: 18.0,
-      ),
+    titleTextStyle: TextStyle(
+      color: Color(0xFF8B8B8B),
+      fontSize: 18.0,
     ),
   );
 }
