@@ -4,7 +4,7 @@ import 'package:ecommerce_ui/screens/signin_success/components/body.dart';
 import 'package:flutter/material.dart';
 
 class SignInSuccessScreen extends StatelessWidget {
-  static String routeName = 'login-success-screen';
+  static String routeName = 'signin-success-screen';
   const SignInSuccessScreen({Key? key}) : super(key: key);
 
   @override
@@ -12,7 +12,7 @@ class SignInSuccessScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: SizedBox(),
-        title: Text('Login Successful'),
+        title: Text('Sign In Successful'),
       ),
       body: SignInSuccessScreenBody(),
     );

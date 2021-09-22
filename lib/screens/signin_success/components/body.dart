@@ -2,6 +2,7 @@
 
 import 'package:ecommerce_ui/components/default_button.dart';
 import 'package:ecommerce_ui/constants.dart';
+import 'package:ecommerce_ui/screens/home/home_screen.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class SignInSuccessScreenBody extends StatelessWidget {
         ),
         SizedBox(height: SizeConfig.screenHeight! * 0.08),
         Text(
-          'Login Successful',
+          'Sign In Successful',
           style: TextStyle(
             fontSize: getProportionateScreenWidth(30.0),
             fontWeight: FontWeight.bold,
@@ -31,7 +32,7 @@ class SignInSuccessScreenBody extends StatelessWidget {
           width: SizeConfig.screenWidth! * 0.6,
           child: DefaultButton(
             buttonText: 'Go To Home',
-            onPressed: () {},
+            onPressed: () => Navigator.pushNamed(context, HomeScreen.routeName),
           ),
         ),
         Spacer(),
