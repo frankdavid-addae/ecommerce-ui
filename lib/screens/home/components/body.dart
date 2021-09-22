@@ -1,5 +1,6 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:ecommerce_ui/screens/home/components/discount_banner.dart';
 import 'package:ecommerce_ui/screens/home/components/home_header.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,7 @@ class HomeScreenBody extends StatelessWidget {
           children: [
             SizedBox(height: getProportionateScreenHeight(20.0)),
             HomeHeader(),
+            DiscountBanner(),
           ],
         ),
       ),
