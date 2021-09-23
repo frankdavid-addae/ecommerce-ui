@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:ecommerce_ui/screens/cart/cart_screen.dart';
 import 'package:ecommerce_ui/screens/complete_profile/complete_profile_screen.dart';
 import 'package:ecommerce_ui/screens/forgot_password/forgot_password_screen.dart';
 import 'package:ecommerce_ui/screens/home/home_screen.dart';
@@ -23,4 +24,5 @@ final Map<String, WidgetBuilder> routes = {
   OtpScreen.routeName: (context) => OtpScreen(),
   HomeScreen.routeName: (context) => HomeScreen(),
   ProductDetailsScreen.routeName: (context) => ProductDetailsScreen(),
+  CartScreen.routeName: (context) => CartScreen(),
 };
